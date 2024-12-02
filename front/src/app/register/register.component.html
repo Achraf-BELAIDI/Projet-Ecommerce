@@ -1,0 +1,63 @@
+<div class="container centered-container">
+  <div class="card justify-content-md-center custom-border">
+    <div class="card-header text-center">
+      <h3>S'inscrire</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="register()">
+        <h4 *ngIf="authError" style="color: brown;">Echec de l'inscription</h4>
+
+        <!-- Champ Nom -->
+        <div class="mb-3 custom-border">
+          <input
+            type="text"
+            class="form-control border-none input-lg"
+            placeholder="Veuillez entrer votre Nom"
+            [(ngModel)]="name"
+            name="name"
+            required>
+        </div>
+
+        <!-- Champ Email -->
+        <div class="mb-3 custom-border">
+          <input
+            type="email"
+            class="form-control border-none input-lg"
+            placeholder="Veuillez entrer votre E-mail"
+            [(ngModel)]="email"
+            name="email"
+            required>
+        </div>
+
+        <!-- Champ Mot de Passe -->
+        <div class="mb-3 custom-border">
+          <input
+            type="password"
+            class="form-control border-none input-lg"
+            placeholder="Veuillez entrer votre Mot de passe"
+            [(ngModel)]="password"
+            name="password"
+            required>
+        </div>
+
+        <!-- Champ Confirmation du Mot de Passe -->
+        <div class="mb-3 custom-border">
+          <input
+            type="password"
+            class="form-control border-none input-lg"
+            placeholder="Veuillez confirmer votre Mot de passe"
+            [(ngModel)]="confirmPassword"
+            name="confirmPassword"
+            required>
+        </div>
+
+        <!-- Boutons -->
+        <div class="mb-3 d-flex justify-content-between">
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-check"></i>&nbsp;S'inscrire
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

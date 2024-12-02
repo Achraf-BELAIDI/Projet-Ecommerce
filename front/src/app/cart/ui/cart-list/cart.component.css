@@ -1,0 +1,58 @@
+.bg-white {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-lg {
+  border-radius: 8px;
+}
+
+.p-4 {
+  padding: 16px;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-gray-600 {
+  color: rgba(75, 85, 99, 1);
+}
+
+.text-gray-200 {
+  background-color: rgba(243, 244, 246, 1);
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+button {
+  background-color: #e5e7eb;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6364ae;
+  color: white;
+}
+
+.bg-red-500 {
+  background-color: #47b4c8;
+}
+
+.bg-red-600 {
+  background-color: #396f8c;
+}
+
+.text-white {
+  color: white;
+}

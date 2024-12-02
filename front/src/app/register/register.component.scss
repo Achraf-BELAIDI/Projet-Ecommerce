@@ -1,0 +1,76 @@
+body {
+  background-color: #137BAF !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.custom-border {
+  border: solid #137BAF;
+  border-radius: 5px;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.card {
+  max-width: 500px; /* Augmenter la largeur de la carte */
+  width: 100%;
+}
+
+.card-header {
+  background-color: #31957F;
+  color: white;
+}
+
+.card-body {
+  padding: 30px; /* Ajouter un peu plus de padding pour l'espacement */
+}
+
+.form-control {
+  border: 1px solid #137BAF;
+  font-size: 16px; /* Augmenter la taille de la police des champs */
+  padding: 15px; /* Augmenter l'espacement à l'intérieur des champs */
+}
+
+.input-lg {
+  font-size: 16px;
+  padding: 15px;
+}
+
+.btn-primary {
+  background-color: #137BAF;
+  border-color: #137BAF;
+}
+
+.btn-link {
+  color: #137BAF;
+  font-weight: bold;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  width: 100%;
+}

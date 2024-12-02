@@ -1,0 +1,18 @@
+<div class="wishlist-container">
+  <h2>Ma Liste d'Envies</h2>
+
+  <div *ngIf="wishListService.wishListproducts().length == 0">
+    <p>Votre liste d'envies est vide. Ajoutez des produits !</p>
+  </div>
+
+  <div *ngIf="wishListService.wishListproducts().length">
+    <ul>
+      <li *ngFor="let product of wishListService.wishListproducts()">
+        <div class="product-card">
+          <p>{{ product.name }}</p>
+          <button (click)="deleteFromWishList(product)">Retirer de la liste</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

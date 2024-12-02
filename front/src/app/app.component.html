@@ -1,0 +1,38 @@
+<p-toolbar [style]="{ height: '100px' }">
+  <div class="p-toolbar-group-start">
+    <img src="assets/icons/icon-72x72.png" alt="logo" />
+  </div>
+  <div class="p-toolbar-group-center">
+    {{ title }}
+  </div>
+  <div class="p-toolbar-group-end">
+    <a *ngIf="isAuthenticated()" routerLink="/cart" class="">
+      <i class="pi pi-shopping-cart" style="font-size: 2rem"></i>
+      <span class="bg-pink-100 text-pink-800 text-xl font-medium me-5 px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300">{{cartService.cartQuantity()}}</span>
+    </a>
+
+    <a *ngIf="isAuthenticated()" routerLink="/wishlist" class="">
+      <i class="pi pi-heart" style="font-size: 2rem; color: red;"></i>
+      <span class="bg-pink-100 text-pink-800 text-xl font-medium me-2 px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300">{{wishlistService.wishListproducts().length}}</span>
+    </a>
+
+  </div>
+  <div class="p-toolbar-group-end">
+    <button *ngIf="isAuthenticated()" (click)="logout()" class="p-button p-component">
+      Logout
+    </button>
+  </div>
+</p-toolbar>
+
+<p-splitter [panelSizes]="[20, 80]" [style]="{ height: 'calc(100vh - 100px)' }">
+  <ng-template pTemplate>
+    <div class="w-full">
+      <app-panel-menu />
+    </div>
+  </ng-template>
+  <ng-template pTemplate>
+    <div class="w-full app-content">
+      <router-outlet></router-outlet>
+    </div>
+  </ng-template>
+</p-splitter>

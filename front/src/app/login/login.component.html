@@ -1,0 +1,42 @@
+<div class="container centered-container">
+  <div class="card justify-content-md-center custom-border">
+    <div class="card-header text-center">
+      <h3>S'authentifier</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="login()">
+        <h4 *ngIf="authError" style="color: brown;"> Echec d'authentification</h4>
+        <!-- Champ email -->
+        <div class="mb-3 custom-border">
+          <input
+            type="email"
+            class="form-control border-none input-lg"
+            placeholder="Veuillez entrer votre E-mail"
+            [(ngModel)]="email"
+            name="login"
+            required>
+        </div>
+
+        <!-- Champ mot de passe -->
+        <div class="mb-3 custom-border">
+          <input
+            type="password"
+            class="form-control border-none input-lg"
+            placeholder="Veuillez entrer votre Mot de passe"
+            [(ngModel)]="password"
+            name="password"
+            required>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-between">
+
+
+          <button type="submit" class="btn btn-primary" (click)="login()">
+            <i class="fa-solid fa-check"></i>&nbsp;Se connecter
+          </button>
+          <button type="button" class="btn btn-link" (click)="goToRegister()">S'enregistrer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
